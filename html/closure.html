@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Closure Demo</title>
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="../css/main.css" />
+</head>
+<body>
+	<div class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand text-brand" href="#" target="_blank">Closure Demo</a>
+			</div>
+
+			<div class="navbar-collapse collapse"></div>
+
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+
+			<!-- Content -->
+			<div class="row box-format">
+				<div class="padding-5">
+					<h4>List of People</h4>
+					<table id="tableContainer"></table>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div id="footer">
+		<div class="navbar navbar-default navbar-fixed-bottom">
+			<div class="navbar-inner">
+				<div class="container">
+					<footer>
+						<div class="row">
+							<div class="span4">Developed by Pao IM</div>
+						</div>
+					</footer>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Import External Library -->
+	<script src="../js/jquery-1.11.0.min.js"></script>
+
+	<!-- Custom JS Library  -->
+	<script src="../js/closure.js"></script>
+
+	<!-- Init Js -->
+	<script type="text/javascript">
+		<!-- // hide from really old browsers that noone uses anymore
+		$(function(){
+			var closure = new GenerateTableContent();
+			closure.displayContent();
+		});
+		//-->
+	</script>
+</body>
+</html>

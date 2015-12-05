@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Prototype Pattern</title>
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="../css/main.css" />
+</head>
+<body>
+	<div class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand text-brand" href="#" target="_blank">Prototype Pattern</a>
+			</div>
+
+			<div class="navbar-collapse collapse"></div>
+
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+
+			<!-- Content -->
+			<div class="row box-format">
+				<div>
+					<h4>Pros:</h4>
+					<ul>
+						<li>Leverage JavaScript's built-in features</li>
+						<li>"Modularize" code into re-useable objects</li>
+						<li>Variables/functions taken out of global namespace</li>
+						<li>Functions loaded into memory one</li>
+						<li>Possible to "override" functions through prototyping</li>
+					</ul>
+				</div>
+				<div>
+					<h4>Cons:</h4>
+					<ul>
+						<li>"this" can be tricky</li>
+						<li>Constructor separate from prototype definition</li>
+					</ul>
+				</div>
+				<div id="output" class="padding-5">
+					
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div id="footer">
+		<div class="navbar navbar-default navbar-fixed-bottom">
+			<div class="navbar-inner">
+				<div class="container">
+					<footer>
+						<div class="row">
+							<div class="span4">Developed by Pao IM</div>
+						</div>
+					</footer>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Import External Library -->
+	<script src="../js/jquery-1.11.0.min.js"></script>
+
+	<!-- Custom JS Library  -->
+	<script src="../js/prototype-pattern.js"></script>
+
+	<!-- Init Js -->
+	<script type="text/javascript">
+		<!-- // hide from really old browsers that noone uses anymore
+		$(function(){
+			var calc = new myNS.Calculator('output');
+			var val = calc.add(20, 10);
+			calc.setVal(val);
+		});
+		//-->
+	</script>
+</body>
+</html>

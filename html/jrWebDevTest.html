@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JavaScript JQuery Developer Challenge</title>
+</head>
+<body>
+	<div id="container">
+		<div id="instruction">
+			<p>For the given HTML snippet below, write a piece of JQuery code that will show/hide the elements below depending on the radio button selection. When "Question 1" is checked, only display the "First Answer" and so on.</p>
+		</div>
+		<div id="contents">
+			<p>Select a question to see the answer.</p>
+			<div id="questionArea" class="questionArea">
+				Question 1 <input type="radio" id="question1" class="question" name="radioGroup1" />
+				Question 2 <input type="radio" id="question2" class="question" name="radioGroup1" />
+				Question 3 <input type="radio" id="question3" class="question" name="radioGroup1" />
+			</div>
+			
+			<div id="answerArea" class="answerArea">
+				<div id="answer1" class="answer">First Answer</div>
+				<div id="answer2" class="answer">Second Answer</div>
+				<div id="answer3" class="answer">Third Answer</div>
+			</div>
+		</div>
+		
+		<!-- Load jQuery Lib from Google CDN as snippet -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		
+		<!-- User Defined Functions by using jQuery and Closure JS -->
+		<script type="text/javascript">
+			<!-- // hide from really old browsers that noone uses anymore
+			$(function(){
+				//Create Class by Using closure
+				var ElementAction = function(){
+					//private functions
+					var showElements = function(selector){
+						selector.show();
+					},
+					
+					hideElement = function(selector){
+						selector.hide();
+					},
+					
+					hideAllAnswers = function(){
+						//Get all answers by class selector
+						var allAnswerSelectors = $("div[class='answer']");
+						
+						hideElement(allAnswerSelectors);
+					},
+					
+					clickOnEachQuestion = function(){
+						$("input[class='question']").click(function(){
+							var questionID = this.id,
+							qNum = parseInt(questionID.replace("question", ""));
+							
+							//hide all answers
+							hideAllAnswers();
+							
+							//Show answer depends on each question
+							var answerSelector = $("#answer" + qNum);//get answer by ID selector
+							showElements(answerSelector);
+							
+						});
+						
+					},
+					
+					init = function(){
+						//hide all answers
+						hideAllAnswers();
+						
+						//Click on Each Question
+						clickOnEachQuestion();
+					};
+					
+					return{
+						//public functions
+						init : init
+					}
+				}
+				
+				//Excute class with init method
+				var elementAction = new ElementAction();
+				elementAction.init();
+				
+			});
+			//-->
+		</script>
+	</div>
+</body>
+</html>
